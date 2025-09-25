@@ -12,7 +12,6 @@ h2{
 }
 
 h1 { 
-    background-color: white; 
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -41,4 +40,12 @@ li{
 }
 p, li{
     font-family:'Times New Roman', Times, serif;
+}
+
+.dark{
+    background-color: #333;
+    color: white;
+}
+.dark h2{
+    color:#006EB6
 }
