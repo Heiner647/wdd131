@@ -29,12 +29,11 @@ img{
     max-width: 100%;
    
 }
-.galery{
+.gallery{
     display: grid;
     grid-template-columns: 1fr;
-    /* gap: 10px */
 }
-.galery img {
+.gallery img {
     object-fit:cover;
     border: 5px solid white;
     box-shadow: 5px 5px 10px black;
@@ -43,18 +42,19 @@ img{
 
 
 }
+
 footer{
     margin-top: 100px;
-    padding-top: 5px;
+    padding: 5px;
     background-color: #447FDB;
 }
 @media (min-width: 700px){
-    .galery {
+    .gallery {
         grid-template-columns: 1fr 1fr;
     }
 }
 @media (min-width: 1000px){
-    .galery {
+    .gallery {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0 150px;
     }
