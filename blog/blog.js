@@ -40,7 +40,26 @@ const articles = [
 	}
 ];
 
-const movieList = document.querySelector("#movies-list");
+
+articles.forEach(articles => {
+
+    const List_Book = `
+        <div class = "info"> 
+            <p>${articles.date}</p>
+            <p>${articles.ages}</p>
+            <p>${articles.genre}</p>
+            <p>${articles.stars}</p>
+        </div>
+        <div class = "Book-Body">
+            <h2>${articles.title}</h2>
+            <div class= "Cover">       
+                <img src=${articles.imgSrc} alt=${articles.imgAlt}>
+            </div>
+            <p> ${articles.description}</p>
+        </div>
+        `;
+    
 
 
-
+    document.getElementById("main").innerHTML += List_Book;
+    });
