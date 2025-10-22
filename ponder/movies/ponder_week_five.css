@@ -69,6 +69,11 @@ header, footer {
     .desc{
         padding-top: 10px;
     }
+    .main-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
   
 
    
