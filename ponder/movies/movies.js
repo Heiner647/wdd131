@@ -43,21 +43,44 @@ const movies = [
     ];
 
 
-movies.forEach(movie => {
+// movies.forEach(movie => {
 
-    const List_Movies = `
-        <article class="movie">
-            <h2>${movie.title}</h2>
-            <img src=${movie.imgSrc} alt=${movie.imgAlt}>
-            <p><strong>Release Date:</strong> ${movie.date}</p>
-            <p><strong>Recommended Age:</strong> ${movie.ages}</p>
-            <p><strong>Genre:</strong> ${movie.genre}</p>
-            <p><strong>Rating:</strong> <span>${movie.stars}</span></p>
-            <p class='desc'>${movie.description}</p>
-        </article>
-        `;
+//     const List_Movies = `
+//         <article class="movie">
+//             <h2>${movie.title}</h2>
+//             <img src=${movie.imgSrc} alt=${movie.imgAlt}>
+//             <p><strong>Release Date:</strong> ${movie.date}</p>
+//             <p><strong>Recommended Age:</strong> ${movie.ages}</p>
+//             <p><strong>Genre:</strong> ${movie.genre}</p>
+//             <p><strong>Rating:</strong> <span>${movie.stars}</span></p>
+//             <p class='desc'>${movie.description}</p>
+//         </article>
+//         `;
     
 
 
-    document.getElementById("movie-list").innerHTML += List_Movies;
-    });
+//     document.getElementById("movie-list").innerHTML += List_Movies;
+//     });
+
+
+
+
+// In Class
+
+function movieTemplate(movie){
+  return `
+    <article class="movie">
+      <h2>${movie.title}</h2>
+      <img src=${movie.imgSrc} alt=${movie.imgAlt}>
+      <p><strong>Release Date:</strong> ${movie.date}</p>
+      <p><strong>Recommended Age:</strong> ${movie.ages}</p>
+      <p><strong>Genre:</strong> ${movie.genre}</p>
+      <p><strong>Rating:</strong> <span>${movie.stars}</span></p>
+      <p class='desc'>${movie.description}</p>
+    </article>
+  `
+}
+
+const htmlStrings = movies.map(movieTemplate);
+document.querySelector("#movie-list").innerHTML = htmlStrings.join("");
+console.log(htmlStrings);
