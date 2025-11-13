@@ -26,7 +26,7 @@ const aCourse = {
   ],
   enrollStudent: function (sectionNum) {
     console.log("sectionNum to enroll in:", sectionNum);
-    const theSection = this.section.find((section)=> sectionNum == section.sectionNum);
+    const theSection = this.sections.find((section)=> sectionNum == section.sectionNum);
     if(theSection) {
       theSection.enrolled++;
       renderSections(this.sections);
@@ -71,15 +71,16 @@ renderSections(aCourse.sections);
 
 
 function clickhandler(event) {
-  const sectionInput = document.querySelector("#sectionNum");
+  const sectionInput = document.querySelector("#sectionNumber");
   const sectionNum = sectionInput.value;
   // How can we tell which button was clicked?
   aCourse.enrollStudent(sectionNum);
+  renderSections(aCourse.sections);
+
 }
 
-document
-  .querySelector("enrollStudent").addEventListener("click", clickhandler);
-document.querySelector("#dropStudent").addEventListener("click", clickHandler);
+document.querySelector("#enrollStudent").addEventListener("click", clickhandler);
+document.querySelector("#dropStudent").addEventListener("click", clickhandler);
 
 
 // document.querySelector("enrollStudent").addEventListener("click", ()=> {
