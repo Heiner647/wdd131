@@ -1,7 +1,17 @@
 import recipes from "./recipes.mjs";
-function main(){
+function main(list){
     const Recipe = getRandomListEntry(recipes);
-    const Recipes = `
+    const ResHtml = list.map(Recipe_Temp)
+       
+    document.getElementById("recipe").innerHTML = Recipes;
+
+}
+
+
+
+function Recipe_Temp(Recipe) {
+    const R = `
+    <div id = "recipe">
         <img src=${Recipe.image} alt=${Recipe.name}>
         <div>
 
@@ -15,11 +25,9 @@ function main(){
             <p id = des>${Recipe.description}</p>
             
         </div>
-        `;
-        
-    document.getElementById("recipe").innerHTML = Recipes;
-
-}
+    </div>`
+        return R
+    }
 
 function ratingTemplate(rating) {
 	// begin building an html string using the ratings HTML written earlier as a model.
@@ -61,4 +69,7 @@ function Tags(tags){
     return Html_tags.join('');
 }
 
+function Button {
+    
+}
 main()
