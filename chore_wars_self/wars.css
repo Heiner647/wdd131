@@ -1,3 +1,214 @@
-header{
+
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yusei+Magic&display=swap");
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #adadad;
+  --secondary-color: #e7e7e7;
+  --accent1-color: #044454;
+  --accent2-color: white;
+
+  /* change the values below to your chosen font(s) */
+  --header_font: "Montserrat", sans-serif;
+  --paragraph-font: "Open Sans", sans-serif;
+  --names_font: "Yusei Magic", sans-serif;
+
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(
+    --primary-color
+  ); /* headlines on a white background */
+  --headline-color-on-color: white; /* headlines on a colored background */
+  --paragraph-color-on-white: var(
+    --primary-color
+  ); /* paragraph text on a white background */
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+
+body{
+    background-color: var(--secondary-color);
+    margin: 0;
+}
+
+main{
     
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+/* -----------------Header------------------------- */
+header{
+    background-color: var(--primary-color);
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+
+#Logo_icon{
+    display: none;
+}
+#Logo_text{
+    width: 100%;
+    max-width: 350px;
+    
+}
+/* -------------------------------------------------- */
+
+
+
+
+/* --------------------Player-------------------------- */
+.player h2{
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 50px;
+
+}
+.player{
+    width: 80%;
+    justify-self: center;
+}
+ 
+.name{
+    font-family: var(--header_font);
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------- */
+
+
+
+/* --------------------Block Two--------------------------- */
+.Block_two{
+    margin: 20px auto;
+    max-width: 95%;
+    background-color: var(--paragraph-background-color);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    grid-row: 1/2;
+    width: 350px;
+    
+}
+.Block_two h3{
+    text-align: center;
+    font-family: var(--header_font);
+}
+.Block_Button{
+    background-color: var(--accent1-color);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--paragraph-color-on-color);
+    display: flex;
+    justify-self: center; 
+    margin: 5px;  
+    flex-grow: 5;
+    align-items: center;
+    max-width: 43%;
+    font-family: var(--header_font);
+    min-width: 80px;
+    max-width: 85px;
+
+ 
+}
+
+#text{
+    width: 60%;
+    height: 20px;
+    margin-top: 7px;
+}
+
+#AddChore_Cont{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+/* ---------------------------------------------------------- */
+
+
+/* -----------------------Item Cont-------------------------- */
+.Item_Cont{
+    background-color: var(--accent2-color);
+    justify-items: center;
+    border-radius: 5px;
+    padding-top: 5px;
+    margin: 10px;
+
+
+}
+#players{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+}
+
+.Item_Buttons_Cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2px;
+
+}
+
+.Delete{
+    background-color: darkred;
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--paragraph-color-on-color);
+    display: flex;
+    justify-self: center; 
+    margin: 5px; 
+}
+
+/* ------------------------------------------------------ */
+
+@media (min-width: 700px) {
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+    }
+    
+    .player #Block_Three{
+        grid-column: 3/4;
+    }
+    .player{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .player h2{
+    background-color: red;
+    /* font-size: 60px; */
+    padding: 5px;
+    margin: 20px auto;
+}
+    .Block_two{
+        margin: 20px auto;
+        width: 80%;
+        grid-column: 2/3;
+        
+    }
+    #Block_Button_Cont{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+   
+@media (max-width: 850px){
+    h2{
+        /* font-size: 50px; */
+    }
+}
 }
