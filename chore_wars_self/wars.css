@@ -43,27 +43,37 @@ main{
 
 }
 /* -----------------Header------------------------- */
-header{
-    background-color: var(--primary-color);
-    width: 100%;
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    margin: 0;
+header{ 
+    background-color: var(--primary-color); 
+    width: 100%; 
+    padding-top: 10px; 
+    display: flex; 
+    justify-content: center; 
+    margin: 0; 
 }
 
 
-#Logo_icon{
-    display: none;
-}
+
 #Logo_text{
-    width: 100%;
     max-width: 350px;
-    
+   
 }
+
+
+/* 
+#Main-Nav{
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+} */
+
 /* -------------------------------------------------- */
 
 
+.Text{
+    margin: 0 auto;
+
+}
 
 
 /* --------------------Player-------------------------- */
@@ -174,6 +184,12 @@ header{
 
 /* ------------------------------------------------------ */
 
+.Nav{
+    max-height: 5px;
+    flex-grow: 0;
+    justify-self: center;
+}
+
 @media (min-width: 700px) {
     main{
         grid-template-columns: 1fr 1fr 1fr;
@@ -206,9 +222,5 @@ header{
     }
 
    
-@media (max-width: 850px){
-    h2{
-        /* font-size: 50px; */
-    }
-}
+
 }
